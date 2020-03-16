@@ -1,0 +1,3 @@
+pricePerHour,  durationInMinutes ,  producingCountry,   String model,gainOfWeightInKilo ,ropeLenghtInMeters ,sittingPlaceHighInMeters, price = 125.0 duration = 84.0 country = USSR model = Beria-2000,gainOfWeightInKilo= 11.0,ropeLenghtInMeters= 12.0,sittingPlaceHighInMeters=6.0
+pricePerHour,  durationInMinutes ,  producingCountry,   String model,gainOfWeightInKilo ,handleLenghtInMeters , price = 55.0 duration = 78.0 country = China model = Chin-Chong,gainOfWeightInKilo= 78.0,handleLenghtInMeters= 56.0
+pricePerHour,  durationInMinutes ,  producingCountry,   String model,droppedWeightInKilo ,trackSpeedInMetersPerSecond , price = 25.0 duration = 12.0 country = Christiania model = G-13,droppedWeightInKilo= 6.0,trackSpeedInMetersPerSecond= 23.0
