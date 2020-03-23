@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="ua.lviv.iot.gym.GymManagerTest" time="0.028" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="ua.lviv.iot.gym.GymManagerTest" time="0.028" tests="1" errors="0" skipped="0" failures="1">
   <properties>
     <property name="java.specification.version" value="13"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="UA"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-13.0.1\bin"/>
-    <property name="sun.java.command" value="C:\Users\Taras\AppData\Local\Temp\surefire14199111601455346106\surefirebooter14858083135136046178.jar C:\Users\Taras\AppData\Local\Temp\surefire14199111601455346106 2020-03-16T14-19-43_906-jvmRun1 surefire10707526221508784939tmp surefire_010360892171703481182tmp"/>
+    <property name="sun.java.command" value="C:\Users\Taras\AppData\Local\Temp\surefire4268882122741859026\surefirebooter3305431895494335376.jar C:\Users\Taras\AppData\Local\Temp\surefire4268882122741859026 2020-03-16T19-53-47_698-jvmRun1 surefire5889719425053253475tmp surefire_015345645746452263601tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\Taras\work\work\target\test-classes;C:\Users\Taras\work\work\target\classes;C:\Users\Taras\.m2\repository\org\junit\jupiter\junit-jupiter\5.6.0\junit-jupiter-5.6.0.jar;C:\Users\Taras\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.6.0\junit-jupiter-api-5.6.0.jar;C:\Users\Taras\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\Taras\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\Taras\.m2\repository\org\junit\platform\junit-platform-commons\1.6.0\junit-platform-commons-1.6.0.jar;C:\Users\Taras\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.6.0\junit-jupiter-params-5.6.0.jar;C:\Users\Taras\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.6.0\junit-jupiter-engine-5.6.0.jar;C:\Users\Taras\.m2\repository\org\junit\platform\junit-platform-engine\1.6.0\junit-platform-engine-1.6.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\Taras\AppData\Local\Temp\surefire14199111601455346106\surefirebooter14858083135136046178.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Taras\AppData\Local\Temp\surefire4268882122741859026\surefirebooter3305431895494335376.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="13.0.1+9"/>
@@ -55,5 +55,9 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="57.0"/>
   </properties>
-  <testcase name="testFindExerciseByDurationInMinutes" classname="ua.lviv.iot.gym.GymManagerTest" time="0.005"/>
+  <testcase name="testFindExerciseByDurationInMinutes" classname="ua.lviv.iot.gym.GymManagerTest" time="0.023">
+    <failure message="expected: &lt;3&gt; but was: &lt;0&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <3> but was: <0>
+	at ua.lviv.iot.gym.GymManagerTest.testFindExerciseByDurationInMinutes(GymManagerTest.java:22)
+]]></failure>
+  </testcase>
 </testsuite>
