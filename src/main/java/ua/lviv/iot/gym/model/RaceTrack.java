@@ -21,11 +21,17 @@ public class RaceTrack extends CardioZoneMachine {
         this.trackSpeedInMetersPerSecond = trackSpeedInMetersPerSecond;
     }
 
+
     public String getHeaders() {
         return super.getHeaders() + ",trackSpeedInMetersPerSecond ";
     }
 
     public String toCSV() {
         return super.toCSV() + "," + "trackSpeedInMetersPerSecond= " + getTrackSpeedInMetersPerSecond();
+    }
+
+    public RaceTrack put(Integer id, RaceTrack racetrack) {
+        // TODO Auto-generated method stub
+        return null;
     }
 }

@@ -5,6 +5,15 @@ public class AbstractExerciseMachine {
     private double durationInMinutes;
     private String producingCountry;
     private String model;
+    private int id;
+
+    public final int getId() {
+        return id;
+    }
+
+    public final void setId(int id) {
+        this.id = id;
+    }
 
     public AbstractExerciseMachine() {
     }

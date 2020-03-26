@@ -1,4 +1,4 @@
-package ua.lviv.iot.gym;
+package ua.lviv.iot.gym.manager;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;

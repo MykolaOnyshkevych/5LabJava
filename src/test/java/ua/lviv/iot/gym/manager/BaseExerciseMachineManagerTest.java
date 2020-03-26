@@ -1,4 +1,4 @@
-package ua.lviv.iot.gym;
+package ua.lviv.iot.gym.manager;
 
 import java.util.LinkedList;
 import java.util.List;
