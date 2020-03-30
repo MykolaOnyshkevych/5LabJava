@@ -50,8 +50,8 @@ public class ExerciseMachineController {
         return ResponseEntity.status(status).build();
     }
 
-    @PostMapping(produces = { MediaType.APPLICATION_JSON_VALUE })
-    public final AbstractExerciseMachine createRaceTrack(final @RequestBody AbstractExerciseMachine racetrackelement) {
+      @PostMapping(produces = { MediaType.APPLICATION_JSON_VALUE })
+    public AbstractExerciseMachine createRaceTrack(final @RequestBody AbstractExerciseMachine racetrackelement) {
         racetrackelement.setId(counter.incrementAndGet());
         racetracks.put(racetrackelement.getId(), racetrackelement);
         return racetrackelement;
