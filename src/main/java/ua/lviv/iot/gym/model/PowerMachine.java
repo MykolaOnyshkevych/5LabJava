@@ -1,5 +1,7 @@
 package ua.lviv.iot.gym.model;
 
+import java.util.Objects;
+
 public class PowerMachine extends AbstractExerciseMachine {
     private double gainOfWeightInKilo;
 
@@ -21,11 +23,27 @@ public class PowerMachine extends AbstractExerciseMachine {
         this.gainOfWeightInKilo = gainOfWeightInKilo;
     }
 
-    public String getHeaders() {
+   /* public String getHeaders() {
         return super.getHeaders() + ",gainOfWeightInKilo ";
-    }
+    }*/
 
     public String toCSV() {
         return super.toCSV() + "," + "gainOfWeightInKilo= " + getGainOfWeightInKilo();
+    }
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        PowerMachine that = (PowerMachine) o;
+        return getGainOfWeightInKilo() == that.getGainOfWeightInKilo();
+    }
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), getGainOfWeightInKilo());
+    }
+   @Override
+    public String toString() {
+        return "PowerMachine [gainOfWeightInKilo=" + gainOfWeightInKilo + "]";
     }
 }
