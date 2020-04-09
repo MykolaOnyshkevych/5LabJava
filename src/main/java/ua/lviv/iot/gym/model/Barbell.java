@@ -1,5 +1,7 @@
 package ua.lviv.iot.gym.model;
 
+import java.util.Objects;
+
 public class Barbell extends PowerMachine {
     private double handleLenghtInMeters;
 
@@ -21,11 +23,30 @@ public class Barbell extends PowerMachine {
         this.handleLenghtInMeters = handleLenghtInMeters;
     }
 
-    public String getHeaders() {
+   /* public String getHeaders() {
         return super.getHeaders() + ",handleLenghtInMeters ";
-    }
+    }*/
 
     public String toCSV() {
         return super.toCSV() + "," + "handleLenghtInMeters= " + getHandleLenghtInMeters();
     }
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        Barbell that = (Barbell) o;
+        return getHandleLenghtInMeters() == that.getHandleLenghtInMeters();
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), getHandleLenghtInMeters());
+    }
+
+    @Override
+    public String toString() {
+        return "Barbell [handleLenghtInMeters=" + handleLenghtInMeters + "]";
+    }
+
 }

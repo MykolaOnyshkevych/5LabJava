@@ -1,6 +1,10 @@
 package ua.lviv.iot.gym.model;
 
+import java.util.Objects;
+
 public class Grief extends PowerMachine {
+   
+
     private double ropeLenghtInMeters;
     private double sittingPlaceHighInMeters;
 
@@ -31,12 +35,31 @@ public class Grief extends PowerMachine {
         this.sittingPlaceHighInMeters = sittingPlaceHighInMeters;
     }
 
-    public String getHeaders() {
+   /* public String getHeaders() {
         return super.getHeaders() + ",ropeLenghtInMeters " + ",sittingPlaceHighInMeters";
-    }
+    }*/
 
     public String toCSV() {
         return super.toCSV() + "," + "ropeLenghtInMeters= " + getRopeLenghtInMeters() + ","
                 + "sittingPlaceHighInMeters=" + getSittingPlaceHighInMeters();
+    }
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        Grief that = (Grief) o;
+        return getRopeLenghtInMeters() == that.getRopeLenghtInMeters() && getSittingPlaceHighInMeters() == that.getSittingPlaceHighInMeters();
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), getRopeLenghtInMeters(),getSittingPlaceHighInMeters() );
+    }
+
+    @Override
+    public String toString() {
+        return "Grief [ropeLenghtInMeters=" + ropeLenghtInMeters + ", sittingPlaceHighInMeters="
+                + sittingPlaceHighInMeters + "]";
     }
 }

@@ -1,4 +1,4 @@
-ua\lviv\iot\gym\BaseExerciseMachineManagerTest.class
-ua\lviv\iot\gym\GymManagerUtilsTest.class
-ua\lviv\iot\gym\GymWriterTest.class
-ua\lviv\iot\gym\GymManagerTest.class
+ua\lviv\iot\gym\manager\GymManagerUtilsTest.class
+ua\lviv\iot\gym\manager\GymManagerTest.class
+ua\lviv\iot\gym\manager\BaseExerciseMachineManagerTest.class
+ua\lviv\iot\gym\manager\GymWriterTest.class

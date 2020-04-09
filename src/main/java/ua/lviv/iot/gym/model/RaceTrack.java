@@ -1,5 +1,7 @@
 package ua.lviv.iot.gym.model;
 
+import java.util.Objects;
+
 public class RaceTrack extends CardioZoneMachine {
     private double trackSpeedInMetersPerSecond;
 
@@ -21,11 +23,32 @@ public class RaceTrack extends CardioZoneMachine {
         this.trackSpeedInMetersPerSecond = trackSpeedInMetersPerSecond;
     }
 
-    public String getHeaders() {
+
+   /* public String getHeaders() {
         return super.getHeaders() + ",trackSpeedInMetersPerSecond ";
-    }
+    }*/
 
     public String toCSV() {
         return super.toCSV() + "," + "trackSpeedInMetersPerSecond= " + getTrackSpeedInMetersPerSecond();
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        RaceTrack that = (RaceTrack) o;
+        return getTrackSpeedInMetersPerSecond() == that.getTrackSpeedInMetersPerSecond();
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), getTrackSpeedInMetersPerSecond());
+    }
+
+    @Override
+    public String toString() {
+        return "RaceTrack [trackSpeedInMetersPerSecond=" + trackSpeedInMetersPerSecond + "]";
+    }
+
 }

@@ -1,6 +1,9 @@
+ua\lviv\iot\gym\business\ExerciseMachineService.class
 ua\lviv\iot\gym\manager\GymManagerUtils$ProducingCountryComparator.class
 ua\lviv\iot\gym\model\RaceTrack.class
 ua\lviv\iot\gym\model\SortType.class
+ua\lviv\iot\gym\RestApplication.class
+ua\lviv\iot\gym\controller\ExerciseMachineController.class
 ua\lviv\iot\gym\manager\GymManager.class
 ua\lviv\iot\gym\model\CardioZoneMachine.class
 ua\lviv\iot\gym\model\PowerMachine.class
@@ -11,4 +14,5 @@ ua\lviv\iot\gym\writer\GymWriter.class
 ua\lviv\iot\gym\manager\GymManagerUtils$1.class
 ua\lviv\iot\gym\model\StepPlatform.class
 ua\lviv\iot\gym\model\AbstractExerciseMachine.class
+ua\lviv\iot\gym\dataaccess\ExerciseMachineRepository.class
 ua\lviv\iot\gym\model\Barbell.class
