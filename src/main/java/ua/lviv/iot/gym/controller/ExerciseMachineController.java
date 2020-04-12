@@ -46,13 +46,13 @@ public class ExerciseMachineController {
     }
 
     @PutMapping(path = "/{id}")
-    public final ResponseEntity<CardioZoneMachine> updateRaceTrack(final @PathVariable("id") Integer id,
+    public ResponseEntity<CardioZoneMachine> updateMansion(final @PathVariable("id") Integer id,
             final @RequestBody CardioZoneMachine raceTrack) {
-        raceTrack.setId(id);
-        CardioZoneMachine initialRaceTrack;
-        return (initialRaceTrack = exerciseMachineService.updateraceTrack(id, raceTrack)) == null
-                ? new ResponseEntity<>(HttpStatus.NOT_FOUND)
-                : new ResponseEntity<>(initialRaceTrack, HttpStatus.OK);
+        CardioZoneMachine previonsRaceTrack = exerciseMachineService.updateraceTrack(id, raceTrack);
+        return previonsRaceTrack  == null
+                ? new ResponseEntity <CardioZoneMachine> (HttpStatus.NOT_FOUND)
+                : new ResponseEntity <CardioZoneMachine> (previonsRaceTrack, HttpStatus.OK);
+        
     }
         
 }

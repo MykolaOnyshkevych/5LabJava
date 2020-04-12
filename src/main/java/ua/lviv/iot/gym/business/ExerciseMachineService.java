@@ -43,14 +43,17 @@ public class ExerciseMachineService {
     }
 
     public CardioZoneMachine updateraceTrack(Integer id, CardioZoneMachine raceTrack) {
-       if (exerciseMachineRepository.existsById(id)) {
-            CardioZoneMachine initialRaceTrack = exerciseMachineRepository.findById(id).get();
+        if (exerciseMachineRepository.existsById(id)) {
+            raceTrack.setId(id);
+            CardioZoneMachine tempRaceTrack = exerciseMachineRepository.findById(id).get();
+            CardioZoneMachine initialRaceTrack = new CardioZoneMachine(tempRaceTrack.getPricePerHour(), tempRaceTrack.getDurationInMinutes(), tempRaceTrack.getProducingCountry(),
+                    tempRaceTrack.getModel(), tempRaceTrack.getDroppedWeightInKilo());
+            initialRaceTrack.setId(id);
             exerciseMachineRepository.save(raceTrack);
             return initialRaceTrack;
         } else {
             return null;
-
-    }
+        }
     }
         
 
